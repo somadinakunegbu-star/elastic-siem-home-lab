@@ -1,124 +1,180 @@
-# \# Elastic Stack SIEM Home Lab
+# Elastic SIEM SOC Lab
 
-# 
+A fully functional Security Operations Center (SOC) lab built using Elastic Stack, Docker, Ubuntu Server, Windows 11, and Kali Linux to simulate enterprise detection engineering and incident response workflows.
 
-# A self-built Security Information and Event Management (SIEM) lab using the Elastic Stack, built to develop hands-on SOC analyst skills: log analysis, detection engineering, and threat simulation mapped to the MITRE ATT\&CK framework.
+---
 
-# 
+## Overview
 
-# \## Goal
+This project demonstrates how to build an end-to-end SIEM environment capable of collecting Windows telemetry, detecting attacker behavior, investigating security events, and documenting incidents using Elastic Security.
 
-# 
+The lab simulates both defender and attacker systems inside a virtualized environment and includes custom investigations mapped to the MITRE ATT&CK framework.
 
-# To build hands-on, production-adjacent experience with a real SIEM pipeline — from raw endpoint telemetry to detection, triage, and case documentation — rather than just standing up software with no data flowing through it.
+---
 
-# 
+## Architecture
 
-# \## Architecture
+```
+                Mac Host
+                    │
+        ┌───────────┴───────────┐
+        │                       │
+ Ubuntu Elastic Server      Windows 11 Endpoint
+ Elasticsearch              Sysmon
+ Kibana                     Elastic Agent
+ Fleet Server               Windows Logs
+        │
+        │
+   Kali Linux
+   Attacker VM
+```
 
-# 
+---
 
-# Three virtual machines, networked together to simulate a small enterprise environment:
+## Technologies Used
 
-# 
+- Elasticsearch
+- Kibana
+- Elastic Fleet
+- Elastic Agent
+- Docker
+- Docker Compose
+- Ubuntu Server
+- Windows 11
+- Kali Linux
+- Sysmon
+- VirtualBox
+- SSH
+- Git
+- GitHub
 
-# | VM | Role | OS | Purpose |
+---
 
-# |---|---|---|---|
+## Features
 
-# | \*\*elastic-server\*\* | SIEM backend | Ubuntu Server 22.04 (via VirtualBox) | Runs Elasticsearch, Kibana, and Fleet Server — the centralized backend that stores and searches all log data |
+- Elastic Stack deployment with Docker
+- Fleet Server configuration
+- Windows endpoint monitoring
+- Sysmon telemetry collection
+- Windows Event Log ingestion
+- Detection engineering using Elastic prebuilt rules
+- MITRE ATT&CK mapping
+- Security alert investigation
+- Incident response documentation
+- SOC case management
 
-# | \*\*endpoint-win\*\* | Monitored endpoint | Windows | Runs Sysmon + Elastic Agent to generate realistic endpoint telemetry (process creation, network connections, registry changes) |
+---
 
-# | \*\*attacker-kali\*\* | Adversary simulation | Kali Linux | Used to generate real attack behavior (via Atomic Red Team, manual technique testing) to validate detection coverage |
+## Detection Scenarios
 
-# 
+### PowerShell Execution
 
-# \### Data flow
+MITRE ATT&CK: **T1059.001**
 
-# 
+Description:
 
-# \\`\\`\\`
+- Generated malicious PowerShell activity
+- Elastic detected execution
+- Alert investigated using Timeline
+- Incident documented in Kibana Cases
 
-# Sysmon (visibility)
+---
 
-# &#x20;  → Elastic Agent (transport)
+### Credential Dumping
 
-# &#x20;  → Fleet Server (management/policy)
+MITRE ATT&CK: **T1003**
 
-# &#x20;  → Elasticsearch (storage, indexed via ECS normalization)
+Description:
 
-# &#x20;  → Kibana (detection rules, alerts, case management)
+- Simulated credential access
+- Detection fired successfully
+- Reviewed parent processes
+- Confirmed expected telemetry
 
-# \\`\\`\\`
+---
 
-# 
+## Screenshots
 
-# \## Tools \& Technologies
+### Fleet Agents
 
-# 
+(Add screenshot)
 
-# \- \*\*SIEM stack:\*\* Elasticsearch, Kibana, Fleet Server, Elastic Agent (via Docker)
+---
 
-# \- \*\*Endpoint visibility:\*\* Sysmon (SwiftOnSecurity config)
+### Kibana Dashboard
 
-# \- \*\*Attacker tooling:\*\* Kali Linux, Atomic Red Team
+(Add screenshot)
 
-# \- \*\*Detection languages:\*\* KQL, EQL
+---
 
-# \- \*\*Framework:\*\* MITRE ATT\&CK
+### Security Alert
 
-# \- \*\*Hypervisor:\*\* Oracle VirtualBox
+(Add screenshot)
 
-# 
+---
 
-# \## Build Summary
+### Timeline Investigation
 
-# 
+(Add screenshot)
 
-# \- \[x] VirtualBox installed, `elastic-server` VM created (Ubuntu Server 22.04, 8GB RAM, 4 vCPU, 60GB disk)
+---
 
-# \- \[x] Network configured in Bridged mode for full connectivity across the lab
+### Case Management
 
-# \- \[x] Docker installed on `elastic-server`
+(Add screenshot)
 
-# \- \[x] Elastic Stack (Elasticsearch + Kibana + Fleet) deployed via Docker
+---
 
-# \- \[x] Windows endpoint VM built, Sysmon + Elastic Agent installed and enrolled
+## Repository Structure
 
-# \- \[x] Kali attacker VM built
+```
+configs/
+notes/
+screenshots/
+README.md
+```
 
-# \- \[x] Prebuilt detection rules enabled in Kibana Security
+---
 
-# \- \[x] Atomic Red Team tests run and mapped to fired alerts
+## Skills Demonstrated
 
-# \- \[x] Custom detection rules written (KQL/EQL)
+- SIEM Administration
+- Detection Engineering
+- Threat Hunting
+- Incident Response
+- Windows Logging
+- Linux Administration
+- Docker
+- Endpoint Security
+- MITRE ATT&CK
+- Security Operations
+- Network Monitoring
 
-# \- \[x] Case documentation practice (triage → pivot → ATT\&CK mapping)
+---
 
-# 
+## Lessons Learned
 
-# \## SOC Analyst Workflow Practiced
+Building this lab provided hands-on experience troubleshooting Docker networking, Windows endpoint enrollment, Elastic Fleet configuration, Sysmon integration, and detection validation. It reinforced practical SOC workflows including log analysis, alert triage, investigation, and documentation.
 
-# 
+---
 
-# This lab is built around the core SOC analyst loop:
+## Future Improvements
 
-# 
+- Active Directory Domain Controller
+- Sigma Rules
+- Suricata IDS
+- Zeek Network Monitoring
+- Custom Detection Rules
+- Threat Hunting Dashboards
 
-# 1\. \*\*Triage\*\* — determine if an alert is a true positive, false positive, or benign
+---
 
-# 2\. \*\*Pivot\*\* — investigate surrounding activity (same host, user, timeframe) to build the full picture
+## Author
 
-# 3\. \*\*Document\*\* — write up findings the way a real SOC ticket/case would be recorded
+Somadina Unegbu
 
-# 4\. \*\*Map to ATT\&CK\*\* — name the technique (e.g., T1059.001 - PowerShell) rather than describing it vaguely
+Information Technology Student
 
-# 
+Towson University
 
-# \## Notes
-
-# 
-
-# Configs, detection rules, and case write-ups referenced above are included in this repository for reference.
-
+Cybersecurity | SOC | Detection Engineering
