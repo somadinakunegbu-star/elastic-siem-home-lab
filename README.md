@@ -103,7 +103,8 @@ Leveraged Kibana Discover and query language (KQL) to analyze 532+ Sysmon proces
 ## Screenshots
 
 ### VirtualBox VM List
-<img width="844" height="483" alt="image" src="https://github.com/user-attachments/assets/22f62a33-dc20-444b-a462-cf9607ffabe7" />
+<img width="844" height="483" alt="virtual vm list" src="https://github.com/user-attachments/assets/05622787-4cc8-453d-858e-c28fbc577509" />
+
 
 
 ### Kibana Homepage
