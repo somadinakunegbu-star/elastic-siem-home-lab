@@ -102,9 +102,8 @@ Description:
 
 ### Kibana Dashboard
 
-(Add screenshot)
+<img width="1916" height="932" alt="kibana homepage" src="https://github.com/user-attachments/assets/6a021d9c-55c9-4ec9-ae00-dd79c186990c" />
 
----
 
 ### Security Alert
 
@@ -112,17 +111,15 @@ Description:
 
 ---
 
-### Timeline Investigation
+### Detection Rule Alert
 
-(Add screenshot)
+<img width="1919" height="1030" alt="detection" src="https://github.com/user-attachments/assets/f68091f9-158a-4312-ae1e-83485287e9b4" />
 
----
 
-### Case Management
+###  Kibana Discover (532 events)
 
-(Add screenshot)
+<img width="1913" height="935" alt="Data Ingestion" src="https://github.com/user-attachments/assets/76db691b-a817-4d7f-be23-3adb62ebbd1c" />
 
----
 
 ## Repository Structure
 
