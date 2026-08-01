@@ -95,11 +95,10 @@ Description:
 
 ## Screenshots
 
-### Fleet Agents
+### VirtualBox VM list
 
-(Add screenshot)
+<img width="844" height="483" alt="virtual vm list" src="https://github.com/user-attachments/assets/6710e872-f422-472e-9c20-5627450a022c" />
 
----
 
 ### Kibana Dashboard
 
