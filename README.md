@@ -427,6 +427,3 @@ This project is provided as-is for educational and portfolio purposes.
 ---
 
 
-✅ Shows you can **design, deploy, and validate** enterprise security infrastructure
-
-**Push this to GitHub now and your portfolio is excellent.**
