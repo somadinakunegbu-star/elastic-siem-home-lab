@@ -128,11 +128,10 @@ Each attack successfully generated telemetry and corresponding alerts within Kib
 
 ## Screenshots
 
-### Architecture
+### VirtualBox VMs Running
 
-*(Insert architecture diagram here)*
+<img width="844" height="483" alt="virtual vm list" src="https://github.com/user-attachments/assets/241a25b3-79ce-4b7b-9bba-74dde6c52309" />
 
----
 
 ### Elastic Fleet
 
