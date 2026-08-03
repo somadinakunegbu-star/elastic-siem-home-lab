@@ -128,26 +128,26 @@ Each attack successfully generated telemetry and corresponding alerts within Kib
 
 ## Screenshots
 
-### VirtualBox VMs Running
+### lab-environment
 
 <img width="844" height="483" alt="virtual vm list" src="https://github.com/user-attachments/assets/241a25b3-79ce-4b7b-9bba-74dde6c52309" />
 
 
-### Kibana Home Page
+### kibana-home
 
 <img width="1916" height="932" alt="kibana homepage" src="https://github.com/user-attachments/assets/44ee6017-2ce1-4162-ad72-134445636906" />
 
 
-### Fleet Healthy Agents
+### fleet-agents
 
 <img width="1914" height="947" alt="healthy agents" src="https://github.com/user-attachments/assets/bbb2d500-297b-4b20-b8b8-f1c88b82c4f2" />
 
 
-### Discover (Data Ingestion)
+### data-ingestion
 
 <img width="1913" height="935" alt="Data Ingestion" src="https://github.com/user-attachments/assets/c5e2017f-3e6b-4ed6-b1bb-04bf0cf7f9f1" />
 
-## #Detection Rule + Nmap Attack
+### detection-alert
 
 <img width="1919" height="1030" alt="detection" src="https://github.com/user-attachments/assets/5d69f7a6-21c5-4918-b1b2-5fd3abc3f9f3" />
 
